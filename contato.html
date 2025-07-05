@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willkuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="file:///C:/Facul/Site%20Portf%C3%B3lio/Index.html">
+            <img src="Imagens/Teste.jfif" alt="Logo Will"/>
+            </a>
+        </div>
+
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <nav class="nav-links" id="menu">
+      <a href="https://ja1-vito.github.io/Portfolio/index">Home</a>
+      <a href="https://ja1-vito.github.io/Portfolio/sobre">Sobre</a>
+      <a href="https://ja1-vito.github.io/Portfolio/projetos">Projetos</a>
+      <a href="https://ja1-vito.github.io/Portfolio/contato">Contato</a>
+    </nav>
+
+    <main>
+    
+        <div class="contato">
+            <div class="itens-contato">
+                <a href="http://wa.me/+5599999999999" target="_blank">
+                <img src="Imagens/zap.webp" alt="Mensagem">
+                <span>+55 99 99999-9999</span>
+                </a>
+            </div>
+
+            <div class="itens-contato">
+                <a href="https://www.instagram.com/direct/t/102173361239062/" target="_blank">
+                <img src="Imagens/Instagram.webp" alt="Direct">
+                <span>Direct do Instagram.</span>
+                </a>
+            </div>
+
+            <div class="itens-contato">
+                <a href="" target="_blank">
+                <img src="Imagens/Email.png" alt="Email">
+                <span>emailfalso@scam.com.</span>
+                </a>
+            </div>
+
+            <h2>Fale Comigo</h2>
+                <form id="form" action>
+                    <div class="input-form">
+                        <div class="input-field">
+                        <input type="text" name="nome" placeholder="Nome completo" required>
+                        </div>
+
+                        <div class="input-field">
+                        <input type="email" name="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="input-field">
+                        <input type="tel" name="telefone" placeholder="Número de telefone" required
+                            pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$">
+                        </div>
+
+                        <div class="input-field">
+                        <input type="text" name="assunto" placeholder="Assunto" required>
+                        </div>
+                    </div>
+
+                    <div class="input-form2">
+                        <div class="input-field">
+                        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Enviar" class="btn">
+                </form>
+        </div>
+    </main>
+
+  <footer>
+    <div class="logoInsta">
+      <a href="https://www.instagram.com/willkuro4/" target="_blank">
+        <img src="Imagens/Insta.png" alt="Instagram">
+      </a>
+      
+      <button onclick="abrirPopup()" class="logoInsta">
+        <img src="Imagens/share.png" alt="share">
+      </button>
+
+      <div id="popupOver" class="overlay" onclick="fecharPopup()">
+        <div id="popupShare" class="popup" onclick="event.stopPropagation()">
+          <h2>Compartilhe!</h2>
+          <div class="areaLink">
+            <input type="text" id="linkShare" value="file:///C:/Facul/Site%20Portf%C3%B3lio/Index.html#" readonly/>
+            <button onclick="copiarLink()">📋</button>
+          </div>
+          <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><img src="Imagens/Facebook.webp" alt="Facebook"></a>
+            <a href="https://x.com/home" target="_blank"><img src="Imagens/X.png" alt="X"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="Imagens/Instagram.webp" alt="Instagram"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="Imagens/zap.webp" alt="WhatsApp"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+
+</body> 
+
+</html>

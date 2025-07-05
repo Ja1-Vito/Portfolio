@@ -1,0 +1,377 @@
+html, body {
+  background-color: rgb(6, 6, 6);
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main{
+  padding: 40px 20px;
+  flex:1
+}
+
+/* Header layout */
+header {
+  min-height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+p {
+  width: 100%;
+  max-width: 700px; /* Limita a largura máxima */
+  margin: 0 auto;   /* Centraliza */
+  line-height: 1.6;
+}
+
+/* Logo imagem */
+.logo img {
+  max-height: 100px;
+  width: auto;
+  display: block;
+  border-radius: 100px;
+}
+
+/* Estilo do menu burger */
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.burger div {
+  width: 30px;
+  height: 5px;
+  background-color: white;
+}
+
+/* Menu de navegação do burger*/
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #222;
+  padding: 20px 30px;
+  border-radius: 8px;
+  width: 150px;
+  min-height: 150px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 25px;
+}
+
+.nav-links a:hover {
+  transform: scale(1.3);
+  transition: transform 0.5s;
+}
+
+.nav-links.show {
+  display: flex;
+}
+
+/* Imagens da galeria */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.galeria img {
+  height: 450px;
+  width: auto;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Overlay escuro + imagem centralizada */
+.overlayImagem {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.conteudoModal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlayImagem img {
+  max-height: 800px;
+  max-width: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  animation: zoomIn 0.3s ease;
+}
+
+.fecharModal {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Animação ao abrir */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* parte debaixo do site */
+.logoInsta {
+  display: flex;
+  gap: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+.logoInsta img {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logoInsta img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* menu popup compartilhar */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* Popup com transição */
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  width: 500px;
+  height: 300px;
+  background: rgb(29, 29, 29);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 0 30px 30px;
+  transition: all 0.4s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.ativo {
+  opacity: 1;
+  visibility: visible;
+  border: 2px solid #444;
+}
+
+.areaLink {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.areaLink input {
+  width: 400px;
+  height: auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.areaLink button {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.redes a {
+  margin: 0 20px;
+  display: inline-block;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.itens-contato{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.itens-contato a{
+  display: flex;
+  align-items: center;
+  gap: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  color: white; 
+}
+
+.itens-contato img {
+  width: 100px;
+  height: 100px;
+}
+
+/* formulário */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+}
+
+.input-form, .input-form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-field {
+  width: 800px;
+  align-items: center;
+}
+
+/* Input e Textarea estilizados */
+input,
+textarea {
+  background-color: #222;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+  width: 100%;
+  outline: none;
+}
+
+/* Placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+/* Foco do campo */
+input:focus,
+textarea:focus {
+  border-color: #888;
+}
+
+/* Campos inválidos */
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: #ff4d4d;
+}
+
+/* Estilo para textarea */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn {
+  background-color: #222;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+  width: 50%;
+  outline: none;
+  align-items: center;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: black;
+  box-sizing: border-box;
+  justify-content: center;
+}

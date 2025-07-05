@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Willkuro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="file:///C:/Facul/Site%20Portf%C3%B3lio/Index.html">
+      <img src="Imagens/Teste.jfif" alt="Logo Will"/>
+      </a>
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <nav class="nav-links" id="menu">
+    <a href="https://ja1-vito.github.io/Portfolio/index">Home</a>
+    <a href="https://ja1-vito.github.io/Portfolio/sobre">Sobre</a>
+    <a href="https://ja1-vito.github.io/Portfolio/projetos">Projetos</a>
+    <a href="https://ja1-vito.github.io/Portfolio/contato">Contato</a>
+  </nav>
+
+  <main>
+    <h2>Olá! Sou Will, espero que goste das minhas artes.</h2>
+    <p>Seja bem vindo!</p>
+
+    <div class="galeria">
+      <img src="Imagens/TMNT.jfif" alt="TMNT" />
+      <img src="Imagens/Irado.jfif" alt="Irado" />
+      <img src="Imagens/Nilvana.jfif" alt="Nilvana" />
+      <img src="Imagens/Xe.jfif" alt="Xe" />
+      <img src="Imagens/Pikomon.jfif" alt="Pikomon" />
+      <img src="Imagens/Bruxa.jfif" alt="Bruxa" />
+      <img src="Imagens/Supercombo.jfif" alt="Supercombo" />
+      <img src="Imagens/Bike.jfif" alt="Bike" />
+      <img src="Imagens/James.jfif" alt="James" />
+      <img src="Imagens/Venom.jfif" alt="Venom" />
+      <img src="Imagens/Tartarugaz.jfif" alt="Tartarugaz" />
+    </div>
+  </main>
+
+  <footer>
+    <div class="logoInsta">
+      <a href="https://www.instagram.com/willkuro4/" target="_blank">
+        <img src="Imagens/Insta.png" alt="Instagram">
+      </a>
+      
+      <button onclick="abrirPopup()" class="logoInsta">
+        <img src="Imagens/share.png" alt="share">
+      </button>
+
+      <div id="popupOver" class="overlay" onclick="fecharPopup()">
+        <div id="popupShare" class="popup" onclick="event.stopPropagation()">
+          <h2>Compartilhe!</h2>
+          <div class="areaLink">
+            <input type="text" id="linkShare" value="file:///C:/Facul/Site%20Portf%C3%B3lio/Index.html#" readonly/>
+            <button onclick="copiarLink()">📋</button>
+          </div>
+          <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><img src="Imagens/Facebook.webp" alt="Facebook"></a>
+            <a href="https://x.com/home" target="_blank"><img src="Imagens/X.png" alt="X"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="Imagens/Instagram.webp" alt="Instagram"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="Imagens/zap.webp" alt="WhatsApp"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Expandir imagem -->
+  <div id="imagemModal" class="overlayImagem" onclick="fecharImagemModal()">
+    <div class="conteudoModal" onclick="event.stopPropagation()">
+      <span class="fecharModal" onclick="fecharImagemModal()"></span>
+      <img id="imagemAmpliada" alt="Imagem Ampliada" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

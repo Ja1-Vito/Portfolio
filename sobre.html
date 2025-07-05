@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Willkuro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="file:///C:/Facul/Site%20Portf%C3%B3lio/Index.html">
+            <img src="Imagens/Teste.jfif" alt="Logo Will"/>
+            </a>
+        </div>
+
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <nav class="nav-links" id="menu">
+      <a href="https://ja1-vito.github.io/Portfolio/index">Home</a>
+      <a href="https://ja1-vito.github.io/Portfolio/sobre">Sobre</a>
+      <a href="https://ja1-vito.github.io/Portfolio/projetos">Projetos</a>
+      <a href="https://ja1-vito.github.io/Portfolio/contato">Contato</a>
+    </nav>
+
+    <main>
+        <h2>Um título ai</h2>
+        <p>
+          Esse site foi um trabalho da faculdade, o qual decidi criar
+          um porfólio para um amigo meu. Eu não tinha o que colocar então to colocando isso aqui só para ocupar espaço mesmo.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        </p>
+        
+
+
+
+    </main>
+
+  <footer>
+    <div class="logoInsta">
+      <a href="https://www.instagram.com/willkuro4/" target="_blank">
+        <img src="Imagens/Insta.png" alt="Instagram">
+      </a>
+      
+      <button onclick="abrirPopup()" class="logoInsta">
+        <img src="Imagens/share.png" alt="share">
+      </button>
+
+      <div id="popupOver" class="overlay" onclick="fecharPopup()">
+        <div id="popupShare" class="popup" onclick="event.stopPropagation()">
+          <h2>Compartilhe!</h2>
+          <div class="areaLink">
+            <input type="text" id="linkShare" value="file:///C:/Facul/Site%20Portf%C3%B3lio/Index.html#" readonly/>
+            <button onclick="copiarLink()">📋</button>
+          </div>
+          <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank"><img src="Imagens/Facebook.webp" alt="Facebook"></a>
+            <a href="https://x.com/home" target="_blank"><img src="Imagens/X.png" alt="X"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="Imagens/Instagram.webp" alt="Instagram"></a>
+            <a href="https://web.whatsapp.com/" target="_blank"><img src="Imagens/zap.webp" alt="WhatsApp"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="script.js"></script>
+
+</body> 
+
+</html>
