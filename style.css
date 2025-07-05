@@ -1,5 +1,5 @@
 html, body {
-  background-color: rgb(6, 6, 6);
+  background-color: purple;
   color: whitesmoke;
   margin: 0;
   padding: 0;
@@ -9,6 +9,15 @@ html, body {
   flex-direction: column;
   height: 100%;
 }
+
+@media (max-width: 600px) {
+  .galeria img{
+    max-height: auto;
+    max-width: 90%;
+    border-radius: 8px;
+  }
+}
+
 
 main{
   padding: 40px 20px;
