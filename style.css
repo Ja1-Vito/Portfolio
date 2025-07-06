@@ -77,7 +77,7 @@ p {
   border-radius: 8px;
   width: 200px;
   min-height: 150px;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .nav-links a {
@@ -127,7 +127,7 @@ p {
   background: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .conteudoModal {
@@ -270,18 +270,18 @@ p {
 }
 
 .itens-contato {
-  display: flex;
+  display: grid;
   align-items: center;
-  gap: 15px;
-  font-size: 20px;
+  justify-content: center;
   flex-wrap: wrap;
-  text-align: left;
+  font-size: 20px;
 }
 
 .itens-contato a {
   display: flex;
   align-items: center;
-  gap: inherit;
+  padding: 10px;
+  gap: 20px;
   font-size: inherit;
   text-decoration: none;
   color: white;
@@ -290,6 +290,7 @@ p {
 .itens-contato img {
   max-width: 5rem;
   max-height: 5rem;
+  gap: 50px;
 }
 
 /* formulário */
