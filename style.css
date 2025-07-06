@@ -21,7 +21,6 @@ html, body {
     max-height: none;
     max-width: 90vw;
   }
-
 }
 
 main {
@@ -36,7 +35,6 @@ header {
   align-items: center;
   padding: 0 20px;
   background-color: black;
-  box-sizing: border-box;
 }
 
 p {
@@ -299,7 +297,7 @@ form {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  padding: 0px;
+  padding: 0;
   align-items: center;
   text-align: center;
   max-width: 600px;
@@ -364,8 +362,6 @@ textarea {
   transition: border 0.3s ease;
   width: 100%;
   max-width: 300px;
-  outline: none;
-  align-items: center;
 }
 
 .btn:hover {
@@ -379,6 +375,5 @@ footer {
   align-items: center;
   padding: 50px 20px;
   background-color: black;
-  box-sizing: border-box;
   justify-content: center;
 }
