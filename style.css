@@ -379,3 +379,270 @@ footer {
   background-color: black;
   justify-content: center;
 }
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/*overlay escuro e imagem expandida*/
+.overlayImagem {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.conteudoModal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlayImagem img {
+  max-height: 800px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+  animation: zoomIn 0.3s ease;
+}
+
+.fecharModal {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 35px;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.logoInsta {
+  display: flex;
+  gap: 30px;
+  background-color: transparent;
+  border: none;
+}
+
+/*rodapé do site*/
+.logoInsta img {
+  max-height: 3.125rem;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logoInsta img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* menu popup para compartilhar*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  width: 500px;
+  height: 300px;
+  background: rgb(29, 29, 29);
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  padding: 0 10px 10px;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup.ativo {
+  opacity: 1;
+  visibility: visible;
+  border: 2px solid #444;
+}
+
+.areaLink {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.areaLink input {
+  width: 20rem;
+  height: auto;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.areaLink button {
+  background: #f0f0f0;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.redes a {
+  margin: 0 15px;
+  display: inline-block;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* área contato*/
+.contato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.itens-contato {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+
+.itens-contato a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+  font-size: inherit;
+  text-decoration: none;
+  color: white;
+}
+
+.itens-contato img {
+  max-width: 5rem;
+  max-height: 5rem;
+  gap: 50px;
+}
+
+/* formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.input-form, .input-form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.input-field {
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+input,
+textarea {
+  background-color: #222;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+  width: 100%;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #888;
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: #ff4d4d;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.btn {
+  background-color: #222;
+  color: white;
+  border: 2px solid #444;
+  border-radius: 15px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: black;
+  justify-content: center;
+}
